@@ -1,0 +1,17 @@
+{% extends 'layout.html'%} {%block body%}
+<div class='inputbox'>
+    <h2>Try your Example</h2>
+    <p>Find out if the Model can classify the input:</p>
+    <br>
+    <br>
+    <br> {% from "includes/_form.html" import render_field %}
+    <form method="POST" action="">
+        <div class="form-group">
+            <dl>
+                {{ render_field(form.name) }} {{ render_field(form.mail) }} {{ render_field(form.origin) }}
+            </dl>
+            <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+        </div>
+    </form>
+</div>
+{%endblock%}
