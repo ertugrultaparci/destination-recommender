@@ -1,12 +1,9 @@
-from flask import Flask, render_template, flash, redirect, url_for, session, request, logging
+from flask import Flask, render_template, flash, redirect, url_for, session, request
 from wtforms import Form, BooleanField, StringField, validators
-import os
-import sys
 import destination_recommender
 from destination_recommender import feature_encoder
 import pandas as pd
 from read_data import read_data
-from sklearn import preprocessing
 
 app = Flask(__name__)
 app.debug=True
